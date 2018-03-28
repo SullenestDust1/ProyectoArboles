@@ -7,14 +7,16 @@
 Controlador::Controlador()  {}
 
 void Controlador::CargarArbolA() {
-    marbolA.InsertarRepetidos(3);
+    Nodo<int> a;
+    marbolA.Insertar(3);
     marbolA.InsertarRepetidos(2);
     marbolA.InsertarRepetidos(10);
     marbolA.InsertarRepetidos(5);
+    marbolA.Insertar(3);
 }
 
 void Controlador::CargarArbolB() {
-    marbolB.InsertarRepetidos(1);
+    marbolB.InsertarRepetidos(5);
     marbolB.InsertarRepetidos(2);
     marbolB.InsertarRepetidos(7);
     marbolB.InsertarRepetidos(9);
@@ -26,7 +28,9 @@ void Controlador::UnirArboles() {
 }
 
 void Controlador::EliminarRepetidos() {
-    marbolu.EliminarRepetidos(marbolu,marbolu.ObtRaiz(),true);
+    MArbol<int> ma; //arbolcopia
+    ma= ma.operator=(marbolu); // arbol copiado
+    marbolu.EliminarRepetidos(ma.ObtRaiz(),true);
     varb.InOrden(marbolu,marbolu.ObtRaiz());
 }
 

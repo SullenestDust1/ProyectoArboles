@@ -51,7 +51,7 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
     {     
       auxiliar=p->ObtInfo();      
       if  (valor==auxiliar)
-           return false;   
+           return false;
     else
     if  (valor<auxiliar)
            {    	 
@@ -115,65 +115,6 @@ bool ArbolBB<Tipo>::Eliminar(Tipo &valor)
   encontrado=false;
   while ((p!=NULL) && !(encontrado)) {
      auxiliar=p->ObtInfo();
-   if  (valor==auxiliar)
-	    encontrado=true;
-     else {
-           ant=p; //El padre de p
-           if (valor< auxiliar)
-                 p=p->ObtIzq();
-          else 
-                 p=p->ObtDer();
-       };
-   };
-if (encontrado)   {   //la Clave esta en el arbol
-        temp=p;   //Apuntador cuyo nodo va a ser eliminado       	            
-        valor=auxiliar;     
-         if (p->ObtDer()==NULL) {  //Tiene un posible Hijo Izquierdo:   
-              if (p==Arbol<Tipo>::ObtRaiz())  //Caso Raiz
-                AsigRaiz(p->ObtIzq());	         //Asigna el hijo izquierdo como Raiz	
-              else    //Se actualiza el Der o Izq del padre seg�n sea el caso
-                if (ant->ObtIzq()==p)  ant->AsigIzq(p->ObtIzq());
-                else                    ant->AsigDer(p->ObtIzq());
-        }
-        else if (p->ObtIzq()==NULL) { 	 //Tiene un posible Hijo Derecho:
-              if (p==Arbol<Tipo>::ObtRaiz()) //Caso Raiz
-                 AsigRaiz(p->ObtDer()); //Asigna el hijo derecho como Raiz	
-              else //Se actualiza el Der o Izq del padre seg�n sea el caso
-            	  if (ant->ObtIzq()==p) ant->AsigIzq(p->ObtDer());
-                  else  ant->AsigDer(p->ObtDer());
-
-}
-else  {	              // Caso dos hijos:				
-                ant=p;
-              //El nodo a eliminar ser� el mas a la derecha del subarbol izquierdo
-                temp=p->ObtIzq(); 
-                while (temp->ObtDer()!=NULL) {
-                	    ant=temp;
-                	    temp=temp->ObtDer();       
-                   };
-                 auxiliar=temp->ObtInfo();
-                 p->AsigInfo(auxiliar);
-                 if (ant==p)       ant-> AsigIzq(temp->ObtIzq());
-                 else              ant-> AsigDer(temp->ObtIzq());
-              };
-           //Sucede para cualquiera de los tres casos
-           delete temp;
-           return true;    
-           }
-   else return false;    //En caso de que la clave no se encuentre!
-};
-     
-/*
-template <class Tipo>
-bool ArbolBB<Tipo>::Eliminar(Tipo &valor)
-{
-  Apuntador p,ant,temp;
-  bool encontrado;
-  Tipo auxiliar;
-  p=Arbol<Tipo>::ObtRaiz(); 
-  encontrado=false;
-  while ((p!=NULL) && !(encontrado)) {
-     auxiliar=p->ObtInfo();
      if  (valor==auxiliar)
 	    encontrado=true;
      else {
@@ -221,4 +162,3 @@ else  {	              // Caso dos hijos:
            }
    else return false;    //En caso de que la clave no se encuentre!
 };
-*/

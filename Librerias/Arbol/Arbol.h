@@ -17,7 +17,7 @@ template <class Tipo>
       	Arbol(Arbol<Tipo> &entrada);
       	Nodo<Tipo>* ObtRaiz();
       	void AsigRaiz(Nodo<Tipo> *p);
-        void Liberar(Nodo<Tipo> *p);
+        bool Liberar(Nodo<Tipo> *p);
       	virtual ~Arbol(void);
       	bool Vacio(void);
       	bool Lleno(void);

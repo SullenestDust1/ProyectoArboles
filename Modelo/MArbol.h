@@ -8,13 +8,13 @@
 
 template<class Tipo>
 class MArbol: public ArbolBB<Tipo>{
-
+private:
 public:
     MArbol();
     bool UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2, Nodo<Tipo> * raiza, Nodo<Tipo> * raizb);
     bool InsertarArbolenOtro(Arbol<Tipo> *arb,Nodo<Tipo> * raiz);
     bool InsertarRepetidos(Tipo valor);
-    bool EliminarRepetidos(Arbol<Tipo>  & Arbol, Nodo<Tipo> * raiz, bool x);
+    bool EliminarRepetidos(Nodo<Tipo> * raiz, bool x);
 };
 
 #endif //MArbol_H

@@ -33,11 +33,11 @@ void Arbol<Tipo>::AsigRaiz(Nodo<Tipo> *p){
 
 ////revisar este metodo
 template<class Tipo>
-void Arbol<Tipo>::Liberar(Nodo<Tipo> *tree)
+bool  Arbol<Tipo>::Liberar(Nodo<Tipo> *tree)
 {
   if(tree != NULL){
-    Liberar(tree->ObtIzq());
-    Liberar(tree->ObtDer());
+    this->Liberar(tree->ObtIzq());
+    this->Liberar(tree->ObtDer());
     delete tree;
   }
 }
@@ -185,7 +185,7 @@ bool Arbol<Tipo>::Eliminar(Nodo<Tipo> *ap,Nodo<Tipo>* &p,Tipo &valor){
                      return enc;
                      }                                            	            
 	      }
-	  else
+	      else
 	      return false;
 	};
 
