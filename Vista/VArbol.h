@@ -10,6 +10,9 @@
 class VArbol : public VGeneral {
 public:
     VArbol();
+    void InOrden(Arbol<string> &Arbol, Nodo<int>* raiz);
+    void PosOrden(Arbol<string> &Arbol,Nodo<int>* raiz);
+    void PreOrden(Arbol<string> &Arbol, Nodo<int>* raiz);
 };
 
 

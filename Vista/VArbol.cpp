@@ -8,7 +8,7 @@ VArbol::VArbol() {
 
 }
 
-void InOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
+void VArbol::InOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
 {
     string simbolo;
     if (raiz!=NULL)
@@ -20,7 +20,7 @@ void InOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
     };
 };
 
-void PosOrden(Arbol<string> &Arbol,Nodo<int>* raiz)
+void VArbol::PosOrden(Arbol<string> &Arbol,Nodo<int>* raiz)
 {
     string simbolo;
     if (raiz!=NULL)
@@ -32,7 +32,7 @@ void PosOrden(Arbol<string> &Arbol,Nodo<int>* raiz)
     };
 };
 
-void PreOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
+void VArbol::PreOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
 {
     string simbolo;
     if (raiz!=NULL)
