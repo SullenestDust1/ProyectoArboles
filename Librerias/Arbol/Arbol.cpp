@@ -36,8 +36,8 @@ template<class Tipo>
 void Arbol<Tipo>::Liberar(Nodo<Tipo> *tree)
 {
   if(tree != NULL){
-    //Liberar(tree->ObtIzq());
-    //Liberar(tree->ObtDer());
+    Liberar(tree->ObtIzq());
+    Liberar(tree->ObtDer());
     delete tree;
   }
 }

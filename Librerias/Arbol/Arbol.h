@@ -1,5 +1,5 @@
-#ifndef ARBOLBINA
-#define ARBOLBINA
+#ifndef Arbol_H
+#define Arbol_H
 //#include <stdlib>        // Para utilizar NULL
 #include <iostream>
 #include "Nodo.h"

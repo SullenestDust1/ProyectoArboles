@@ -1,6 +1,7 @@
 #ifndef Nodo_H
 #define Nodo_H
-
+#include <string>
+using namespace std;
 template<class Tipo>
 class Nodo {
 
