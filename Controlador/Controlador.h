@@ -12,6 +12,9 @@ private : VArbol<int> varb;
     MArbol<int> marbolA;
     MArbol<int> marbolB;
     MArbol<int> marbolu;
+    bool checkCargArbol1;
+    bool checkCargArbol2;
+    bool checkCargArbol3;
 public:
     Controlador();
     void CargarArbolA();

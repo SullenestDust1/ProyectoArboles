@@ -1,0 +1,21 @@
+void Controlador::EliminarRepetidos() {
+    int y;
+    Pila<int> pila;
+    Nodo<int> *p;
+    varb.InOrden(marbolu,marbolu.ObtRaiz());
+    cout<<"Esta tiene repetidos"<<endl;
+    marbolu.SacarElementos(marbolu,marbolu.ObtRaiz());
+    pila = marbolu.getPila();
+    marbolu.AsigRaiz(NULL);
+    while(pila.ObtTope()!=NULL){
+        pila.Remover(y);
+        //cout<<y<<endl;
+        marbolu.Insertar(y);
+    }
+    varb.InOrden(marbolu,marbolu.ObtRaiz());
+    varb.InOrden(marbolu,marbolu.ObtRaiz());
+    cout<<endl;
+    varb.PreOrden(marbolu,marbolu.ObtRaiz());
+    cout<<endl;
+    varb.PosOrden(marbolu,marbolu.ObtRaiz());
+}
