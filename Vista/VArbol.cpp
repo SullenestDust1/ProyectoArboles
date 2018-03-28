@@ -4,43 +4,48 @@
 #include "VArbol.h"
 
 
-VArbol::VArbol() {
 
+template<class Tipo>
+void VArbol<Tipo>::PosOrden(Arbol<Tipo>  & Arbol, Nodo<Tipo> * raiz)
+{
+    string simbolo;
+    if (raiz!=NULL)
+    {
+        this->PosOrden(Arbol,raiz->ObtIzq());
+        this->PosOrden(Arbol,raiz->ObtDer());
+        simbolo=raiz->ObtInfo();
+        cout << simbolo << "-";
+    }
+}
+template<class Tipo>
+void VArbol<Tipo>::PreOrden(Arbol<Tipo> & Arbol, Nodo<Tipo> * raiz) {
+    string simbolo;
+    if (raiz!=NULL)
+    {
+        simbolo=raiz->ObtInfo();
+        cout << simbolo << "-";
+        this->PreOrden(Arbol,raiz->ObtIzq());
+        this->PreOrden(Arbol,raiz->ObtDer());
+    }
 }
 
-void VArbol::InOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
-{
-    string simbolo;
-    if (raiz!=NULL)
-    {
-        InOrden(Arbol,raiz->ObtIzq());
-        simbolo=raiz->ObtInfo();
-        cout << simbolo << "-";
-        InOrden(Arbol,raiz->ObtDer());
-    };
-};
+template<class Tipo>
+VArbol<Tipo>::VArbol() {}
 
-void VArbol::PosOrden(Arbol<string> &Arbol,Nodo<int>* raiz)
-{
+template<class Tipo>
+void VArbol<Tipo>::InOrden(Arbol <Tipo> &Arbol, Nodo<Tipo> *raiz) {
     string simbolo;
     if (raiz!=NULL)
     {
-        PosOrden(Arbol,raiz->ObtIzq());
-        PosOrden(Arbol,raiz->ObtDer());
+        this->InOrden(Arbol,raiz->ObtIzq());
         simbolo=raiz->ObtInfo();
         cout << simbolo << "-";
-    };
-};
+       this->InOrden(Arbol,raiz->ObtDer());
+    }
+}
 
-void VArbol::PreOrden(Arbol<string> &Arbol, Nodo<int>* raiz)
-{
-    string simbolo;
-    if (raiz!=NULL)
-    {
-        simbolo=raiz->ObtInfo();
-        cout << simbolo << "-";
-        PreOrden(Arbol,raiz->ObtIzq());
-        PreOrden(Arbol,raiz->ObtDer());
-    };
-};
+
+
+
+
 
