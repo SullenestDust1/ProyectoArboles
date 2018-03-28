@@ -23,17 +23,26 @@ int main() {
 #include "Librerias/Genericas/VGeneral.h"
 #include "Controlador/Controlador.h"
 using namespace std;
+
+void MenuPrincipal(VGeneral vg, Controlador c);
+void Sub_Arbol(VGeneral vg, Controlador c);
+void Sub_Metodo(VGeneral vg, Controlador c,int arb);
 int main()
 {
-
-    int opc;
     VGeneral  vg;
     Controlador c;
+    MenuPrincipal(vg,c);
+    return 0;
+}
+
+void MenuPrincipal(VGeneral vg, Controlador c){
+
+    int opc;
     vg.Pausa();
     do
     {
         vg.Limpiar();
-        vg.ImprimirLineasBlanco(2);
+        vg.ImprimirLineasBlanco(1f);
         vg.Limpiar();
         vg.ImprimirEncabezado("\n      M E N U  O P C I O N E S\n","      =======  ===============");
         vg.ImprimirMensaje("   1. CARGAR ARBOL A\n");
@@ -54,27 +63,56 @@ int main()
             case 4:  c.EliminarRepetidos();
                 break;
             case 5:  {
-                int arb;
-                do
-                {
-                vg.Limpiar();
-                vg.ImprimirLineasBlanco(2);
-                vg.Limpiar();
-                vg.ImprimirEncabezado("\n      SELECCIONA EL ARBOL A IMPRIMIR \n","      =======  ===============");
-                vg.ImprimirMensaje("   1. ARBOL A\n");
-                vg.ImprimirMensaje("   2. ARBOL B\n");
-                vg.ImprimirMensaje("   3. ARBOL UNION\n");vg.ImprimirMensaje("  4. VOLVER AL MENU\n");
-                arb = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,4);
-                }
-                while(arb != 3);
-                  }
+              Sub_Arbol(vg,c);
+            }
                 break;
         }
     }
     while(opc != 6);
-
-
-    return 0;
 }
+void Sub_Arbol(VGeneral vg, Controlador c){
+    int arb;
+    do
+    {
+        vg.Limpiar();
+        vg.ImprimirLineasBlanco(1);
+        vg.Limpiar();
+        vg.ImprimirEncabezado("\n      SELECCIONA EL ARBOL A IMPRIMIR \n","      =======  ===============");
+        vg.ImprimirMensaje("   1. ARBOL A\n");
+        vg.ImprimirMensaje("   2. ARBOL B\n");
+        vg.ImprimirMensaje("   3. ARBOL UNION\n");
+        vg.ImprimirMensaje("  4. VOLVER AL MENU\n");
+        arb = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,4);
+        switch(arb) {
+            case 4:
+                MenuPrincipal(vg,c);
+                break;
+            default:
+                Sub_Metodo(vg,c,arb);
 
+        }
+    } while(arb != 4);
+}
+void Sub_Metodo(VGeneral vg, Controlador c,int arb){
+    int met;
+    do
+    {
+        vg.Limpiar();
+        vg.ImprimirLineasBlanco(2);
+        vg.Limpiar();
+        vg.ImprimirEncabezado("\n      SELECCIONA EL METODO A USAR \n","      =======  ===============");
+        vg.ImprimirMensaje("   1. INORDEN \n");
+        vg.ImprimirMensaje("   2. PREORDEN \n");
+        vg.ImprimirMensaje("   3. POSTORDEN \n");
+        vg.ImprimirMensaje("  4. VOLVER AL MENU\n");
+        arb = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,4);
+        switch(arb) {
+            case 4:
+                MenuPrincipal(vg,c);
+                break;
+            default:
+                c.ImprimirArbol(arb,met);
+        }
+    } while(arb != 4);
+}
 
