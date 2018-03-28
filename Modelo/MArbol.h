@@ -14,6 +14,7 @@ public:
     bool UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2, Nodo<Tipo> * raiza, Nodo<Tipo> * raizb);
     bool InsertarArbolenOtro(Arbol<Tipo> *arb,Nodo<Tipo> * raiz);
     bool InsertarRepetidos(Tipo valor);
+    bool EliminarRepetidos(Arbol<Tipo>  & Arbol, Nodo<Tipo> * raiz, bool x);
 };
 
 #endif //MArbol_H

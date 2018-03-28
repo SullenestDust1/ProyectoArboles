@@ -227,7 +227,7 @@ bool Arbol<Tipo>::EliDerecho(Nodo<Tipo>* padre,Tipo &valor)
 template<class Tipo>
 Arbol<Tipo> &Arbol<Tipo>::operator = (Arbol<Tipo> &Entrada)
 {
-		raiz = CopiaArbol(Entrada.ObtRaiz());
+     raiz = CopiaArbol(Entrada.ObtRaiz());
       return *this;
 }
 

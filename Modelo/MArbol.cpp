@@ -63,5 +63,23 @@ bool MArbol<Tipo>::InsertarRepetidos(Tipo valor)
     return true;
 }
 
+template<class Tipo>
+bool MArbol<Tipo>::EliminarRepetidos(Arbol<Tipo>  & Arbol, Nodo<Tipo> * raiz,bool x) {
+    if(x==true) {
+        MArbol<Tipo> ma;
+        ma.operator=(ma);
+        this->Liberar(raiz);
+    }
 
+    int simbolo;
+    if (raiz!=NULL)
+    {
+        this->EliminarRepetidos(Arbol,raiz->ObtIzq(),false);
+        this->EliminarRepetidos(Arbol,raiz->ObtDer(),false);
+        simbolo=raiz->ObtInfo();
+        this->Insertar(simbolo);
+    }
+
+    return false;
+}
 template class MArbol<int>;

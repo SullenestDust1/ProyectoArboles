@@ -8,7 +8,7 @@ Controlador::Controlador()  {}
 
 void Controlador::CargarArbolA() {
     marbolA.InsertarRepetidos(3);
-    marbolA.InsertarRepetidos(-2);
+    marbolA.InsertarRepetidos(2);
     marbolA.InsertarRepetidos(10);
     marbolA.InsertarRepetidos(5);
 }
@@ -26,7 +26,8 @@ void Controlador::UnirArboles() {
 }
 
 void Controlador::EliminarRepetidos() {
-
+    marbolu.EliminarRepetidos(marbolu,marbolu.ObtRaiz(),true);
+    varb.InOrden(marbolu,marbolu.ObtRaiz());
 }
 
 void Controlador::ImprimirArbol(int arbol, int metodo) {
