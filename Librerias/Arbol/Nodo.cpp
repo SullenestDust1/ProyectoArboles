@@ -37,4 +37,3 @@ Nodo<Tipo> *Nodo<Tipo>::ObtDer() {
 };
      
 template class Nodo<int>;
-template class Nodo<string>;

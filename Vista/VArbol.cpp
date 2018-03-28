@@ -8,22 +8,22 @@
 template<class Tipo>
 void VArbol<Tipo>::PosOrden(Arbol<Tipo>  & Arbol, Nodo<Tipo> * raiz)
 {
-    string simbolo;
+    int simbolo;
     if (raiz!=NULL)
     {
         this->PosOrden(Arbol,raiz->ObtIzq());
         this->PosOrden(Arbol,raiz->ObtDer());
         simbolo=raiz->ObtInfo();
-        cout << simbolo << "-";
+        cout << simbolo << " - ";
     }
 }
 template<class Tipo>
 void VArbol<Tipo>::PreOrden(Arbol<Tipo> & Arbol, Nodo<Tipo> * raiz) {
-    string simbolo;
+    int simbolo;
     if (raiz!=NULL)
     {
         simbolo=raiz->ObtInfo();
-        cout << simbolo << "-";
+        cout << simbolo << " - ";
         this->PreOrden(Arbol,raiz->ObtIzq());
         this->PreOrden(Arbol,raiz->ObtDer());
     }
@@ -34,12 +34,12 @@ VArbol<Tipo>::VArbol() {}
 
 template<class Tipo>
 void VArbol<Tipo>::InOrden(Arbol <Tipo> &Arbol, Nodo<Tipo> *raiz) {
-    string simbolo;
+    int  simbolo;
     if (raiz!=NULL)
     {
         this->InOrden(Arbol,raiz->ObtIzq());
         simbolo=raiz->ObtInfo();
-        cout << simbolo << "-";
+        cout << simbolo << " - ";
        this->InOrden(Arbol,raiz->ObtDer());
     }
 }
