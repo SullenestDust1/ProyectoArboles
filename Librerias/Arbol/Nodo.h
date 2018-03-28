@@ -18,6 +18,6 @@ public:
     void AsigDer(Nodo<Tipo> *p);
     Nodo<Tipo> *ObtDer();
 };
-
+#
 #endif
 
