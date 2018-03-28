@@ -243,3 +243,5 @@ Nodo<Tipo> *Arbol<Tipo>::CopiaArbol(Nodo<Tipo> *tree)
       }
       else return NULL; 
 }
+
+template class Arbol<int>;
