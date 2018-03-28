@@ -11,7 +11,9 @@ class MArbol: public ArbolBB<Tipo>{
 
 public:
     MArbol();
-    bool UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2);
+    bool UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2, Nodo<Tipo> * raiza, Nodo<Tipo> * raizb);
+    bool InsertarArbolenOtro(Arbol<Tipo> *arb,Nodo<Tipo> * raiz);
+    bool InsertarRepetidos(Tipo valor);
 };
 
 #endif //MArbol_H

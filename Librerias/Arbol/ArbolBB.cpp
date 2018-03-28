@@ -50,9 +50,9 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
   while (p!=NULL)
     {     
       auxiliar=p->ObtInfo();      
-      //if  (valor==auxiliar)
-        //   return false;    //Inserta con repetidos  asi que lo comentamos :V
-    //else
+      if  (valor==auxiliar)
+           return false;   
+    else
     if  (valor<auxiliar)
            {    	 
              ant=p;     

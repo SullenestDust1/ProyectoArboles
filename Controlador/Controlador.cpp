@@ -7,18 +7,22 @@
 Controlador::Controlador()  {}
 
 void Controlador::CargarArbolA() {
-    marbolA.Insertar(3);
-    marbolA.Insertar(-2);
-    marbolA.Insertar(10);
-    marbolA.Insertar(5);
+    marbolA.InsertarRepetidos(3);
+    marbolA.InsertarRepetidos(-2);
+    marbolA.InsertarRepetidos(10);
+    marbolA.InsertarRepetidos(5);
 }
 
 void Controlador::CargarArbolB() {
-
+    marbolB.InsertarRepetidos(1);
+    marbolB.InsertarRepetidos(2);
+    marbolB.InsertarRepetidos(7);
+    marbolB.InsertarRepetidos(9);
 }
 
 void Controlador::UnirArboles() {
 //marbolu = marbolu.Combinar(marbolA.ObtRaiz(),marbolB.ObtRaiz(),1);
+    marbolu.UnirArbol(&marbolA,&marbolB,marbolA.ObtRaiz(),marbolB.ObtRaiz());
 }
 
 void Controlador::EliminarRepetidos() {
