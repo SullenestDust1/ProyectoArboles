@@ -13,7 +13,7 @@ bool MArbol<Tipo>::UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2) {
     Nodo<int>* p,*p2, *p3;
     p = this->CopiaArbol(arb->ObtRaiz());
     p2 = this->CopiaArbol(arb2->ObtRaiz());
-    p3 = this->Combinar(p,p2,1);
+    p3 = this->Combinar(p,p2,arb->ObtRaiz()->ObtInfo());
     this->AsigRaiz(p3);
     return false;
 }
