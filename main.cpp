@@ -2,14 +2,18 @@
 
 #include "Librerias/Arbol/ArbolBB.cpp"
 #include "Librerias/Pila/Pila.cpp"
+#include "Librerias/Genericas/VGeneral.cpp"
+
 int main() {
     ArbolBB<int> arboldemierda;
     Pila<int> pilademierda;
     Nodo<int> *p1;
     p1= arboldemierda.CrearNodo(9);
     arboldemierda.AsigRaiz(p1);
+    pilademierda.Insertar(p1->ObtInfo());
     p1 = arboldemierda.CrearNodo(1231);
     arboldemierda.ObtRaiz()->AsigDer(p1);
+    pilademierda.Insertar(p1->ObtInfo());
     cout<< arboldemierda.ObtRaiz()->ObtInfo()<<endl;
     cout << arboldemierda.ObtRaiz()->ObtDer()->ObtInfo() << endl;
     return 0;

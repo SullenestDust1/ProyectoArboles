@@ -41,9 +41,9 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
   Apuntador p,nuevo,ant;
   Tipo auxiliar;
   
-  nuevo=CrearNodo(valor);
+  nuevo=this->CrearNodo(valor);
   if (Arbol<Tipo>::ObtRaiz()==NULL)        
-	    AsigRaiz(nuevo);
+	    this->AsigRaiz(nuevo);
   else
   {
   p=Arbol<Tipo>::ObtRaiz();     	    
@@ -58,14 +58,14 @@ else
              ant=p;     
              p=p->ObtIzq();
              if (p==NULL)
-               InsIzquierdo(ant,valor);
+               this->InsIzquierdo(ant,valor);
            }    
         else
           {
              ant=p;
              p=p->ObtDer();
              if (p==NULL) 
-               InsDerecho(ant,valor);
+               this->InsDerecho(ant,valor);
            };
      };
   };	

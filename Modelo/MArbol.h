@@ -1,14 +1,15 @@
 //
-// Created by juan on 3/27/18.
-//
+// Created by marco on 3/27/18.
+#ifndef MArbol_H
+#define MArbol_H
 
-#ifndef PROYECTOARBOLES_MARBOLA_H
-#define PROYECTOARBOLES_MARBOLA_H
+#include "../Librerias/Arbol/ArbolBB.cpp"
 
+template<class Tipo>
+class MArbol: public ArbolBB<Tipo>{
 
-class MArbolA {
-
+public:
+    MArbol();
 };
 
-
-#endif //PROYECTOARBOLES_MARBOLA_H
+#endif //MArbol_H
