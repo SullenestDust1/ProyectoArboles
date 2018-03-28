@@ -114,3 +114,4 @@ int Pila<Tipo>::numElementos() {
 }
 
 
+template class Pila<int>;

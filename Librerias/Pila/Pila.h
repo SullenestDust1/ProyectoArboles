@@ -38,5 +38,4 @@ public:
 
 };
 
-#include "Pila.cpp"
 #endif
