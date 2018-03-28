@@ -42,7 +42,7 @@ void MenuPrincipal(VGeneral vg, Controlador c){
     do
     {
         vg.Limpiar();
-        vg.ImprimirLineasBlanco(1f);
+        vg.ImprimirLineasBlanco(1);
         vg.Limpiar();
         vg.ImprimirEncabezado("\n      M E N U  O P C I O N E S\n","      =======  ===============");
         vg.ImprimirMensaje("   1. CARGAR ARBOL A\n");

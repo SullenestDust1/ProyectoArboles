@@ -26,5 +26,27 @@ void Controlador::EliminarRepetidos() {
 }
 
 void Controlador::ImprimirArbol(int arbol, int metodo) {
-
+    MArbol<int> arbols;
+    switch (arbol){
+    case 1:
+        arbols = marbolA;
+     break;
+    case 2:
+        arbols= marbolB;
+        break;
+    case 3:
+         arbols= marbolu;
+        break;
+}
+    switch (metodo){
+        case 1:
+            varb.InOrden(arbols, arbols.ObtRaiz());
+            break;
+        case 2:
+            varb.PreOrden(arbols, arbols.ObtRaiz());
+            break;
+        case 3:
+            varb.PosOrden(arbols, arbols.ObtRaiz());
+            break;
+    }
 }
