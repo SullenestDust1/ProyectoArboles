@@ -11,6 +11,7 @@ class MArbol: public ArbolBB<Tipo>{
 
 public:
     MArbol();
+    bool UnirArbol(Arbol<Tipo> *arb, Arbol<Tipo> *arb2);
 };
 
 #endif //MArbol_H

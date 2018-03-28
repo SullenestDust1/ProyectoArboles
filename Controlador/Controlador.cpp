@@ -8,9 +8,9 @@ Controlador::Controlador()  {}
 
 void Controlador::CargarArbolA() {
     marbolA.Insertar(3);
-    marbolA.Insertar(9);
+    marbolA.Insertar(-2);
     marbolA.Insertar(10);
-    marbolA.Insertar(3);
+    marbolA.Insertar(5);
 }
 
 void Controlador::CargarArbolB() {
@@ -18,7 +18,7 @@ void Controlador::CargarArbolB() {
 }
 
 void Controlador::UnirArboles() {
-
+//marbolu = marbolu.Combinar(marbolA.ObtRaiz(),marbolB.ObtRaiz(),1);
 }
 
 void Controlador::EliminarRepetidos() {
