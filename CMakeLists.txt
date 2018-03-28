@@ -8,7 +8,7 @@ ADD_LIBRARY(LibreriaArbol STATIC
         Librerias/Pila/Pila.cpp
         Librerias/Arbol/Nodo.cpp
         Librerias/Arbol/Arbol.cpp
-        Librerias/Arbol/ArbolBB.cpp Vista/VArbol.cpp Vista/VArbol.h)
+        Librerias/Arbol/ArbolBB.cpp )
 
-add_executable(ProyectoArboles main.cpp Controlador/Controlador.cpp Controlador/Controlador.h)
+add_executable(ProyectoArboles main.cpp Controlador/Controlador.cpp Controlador/Controlador.h Vista/VArbol.cpp Vista/VArbol.h Modelo/MArbol.cpp Modelo/MArbol.h)
 TARGET_LINK_LIBRARIES(ProyectoArboles LibreriaArbol)

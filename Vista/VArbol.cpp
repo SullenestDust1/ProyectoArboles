@@ -43,8 +43,7 @@ void VArbol<Tipo>::InOrden(Arbol <Tipo> &Arbol, Nodo<Tipo> *raiz) {
        this->InOrden(Arbol,raiz->ObtDer());
     }
 }
-
-
+template  class VArbol<int>;
 
 
 
