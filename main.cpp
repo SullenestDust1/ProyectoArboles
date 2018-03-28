@@ -105,7 +105,7 @@ void Sub_Metodo(VGeneral vg, Controlador c,int arb){
         vg.ImprimirMensaje("   2. PREORDEN \n");
         vg.ImprimirMensaje("   3. POSTORDEN \n");
         vg.ImprimirMensaje("  4. VOLVER AL MENU\n");
-        arb = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,4);
+        met = vg.LeerValidarNro("   SELECCIONE SU OPCION : ",1,4);
         switch(arb) {
             case 4:
                 MenuPrincipal(vg,c);
@@ -113,6 +113,6 @@ void Sub_Metodo(VGeneral vg, Controlador c,int arb){
             default:
                 c.ImprimirArbol(arb,met);
         }
-    } while(arb != 4);
+    } while(met != 4);
 }
 
