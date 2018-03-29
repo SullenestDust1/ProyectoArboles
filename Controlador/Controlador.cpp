@@ -12,20 +12,30 @@ Controlador::Controlador()  {
 }
 
 void Controlador::CargarArbolA() {
-    marbolA.InsertarRepetidos(3);
-    marbolA.InsertarRepetidos(2);
-    marbolA.InsertarRepetidos(10);
-    marbolA.InsertarRepetidos(5);
-    marbolA.InsertarRepetidos(3);
+
+        int numero;
+    int resp;
+
+        do {
+
+            numero = varb.LeerValidarNro("\n Numero: (1,100)",1,100);
+            marbolA.InsertarRepetidos(numero);
+            resp = varb.LeerValidarNro("\n Desea Agregar otro articulo ? (1)Si (2)No : ", 1, 2);
+        }while(resp==1);
     checkCargArbol1 = true;
     cout<<"Se Cargo el arbol A exitosamente";
 }
 
 void Controlador::CargarArbolB() {
-    marbolB.InsertarRepetidos(5);
-    marbolB.InsertarRepetidos(2);
-    marbolB.InsertarRepetidos(7);
-    marbolB.InsertarRepetidos(9);
+    int numero;
+    int resp;
+
+    do {
+
+        numero = varb.LeerValidarNro("\n Numero: (1,100)",1,100);
+        marbolB.InsertarRepetidos(numero);
+        resp = varb.LeerValidarNro("\n Desea Agregar otro articulo ? (1)Si (2)No : ", 1, 2);
+    }while(resp==1);
     checkCargArbol2 = true;
     cout<<"Se Cargo el arbol B exitosamente";
 
