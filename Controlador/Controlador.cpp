@@ -18,9 +18,9 @@ void Controlador::CargarArbolA() {
 
         do {
 
-            numero = varb.LeerValidarNro("\n Numero: (1,100)",1,100);
+            numero = varb.LeerValidarNro("\n Numero(1,100): ",1,100);
             marbolA.InsertarRepetidos(numero);
-            resp = varb.LeerValidarNro("\n Desea Agregar otro articulo ? (1)Si (2)No : ", 1, 2);
+            resp = varb.LeerValidarNro("\n Desea Agregar otro numero ? (1)Si (2)No : ", 1, 2);
         }while(resp==1);
     checkCargArbol1 = true;
     cout<<"Se Cargo el arbol A exitosamente";
@@ -32,9 +32,9 @@ void Controlador::CargarArbolB() {
 
     do {
 
-        numero = varb.LeerValidarNro("\n Numero: (1,100)",1,100);
+        numero = varb.LeerValidarNro("\n Numero(1,100): ",1,100);
         marbolB.InsertarRepetidos(numero);
-        resp = varb.LeerValidarNro("\n Desea Agregar otro articulo ? (1)Si (2)No : ", 1, 2);
+        resp = varb.LeerValidarNro("\n Desea Agregar otro numero ? (1)Si (2)No : ", 1, 2);
     }while(resp==1);
     checkCargArbol2 = true;
     cout<<"Se Cargo el arbol B exitosamente";
@@ -57,6 +57,7 @@ void Controlador::EliminarRepetidos() {
         MArbol<int> ma; //arbolcopia
         ma = ma.operator=(marbolu); // arbol copiado
         marbolu.EliminarRepetidos(ma.ObtRaiz(), true);
+        cout<<"Se eliminaron los elementos repetidos del arbolunion";
     }else
         cout<<"Se debe crear primero el arbolunion"<<endl;
 }
